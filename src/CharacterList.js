@@ -9,7 +9,7 @@ function CharacterList() {
   // Use useMemo to sort characters and only re-compute when characters array changes
   const sortedCharacters = useMemo(() => {
     return [...characters].sort((a, b) => a.initiative - b.initiative);
-  }, [characters, handleEdit]); 
+  }, [characters]); 
 
   return (
     <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column-reverse' }}>

@@ -49,7 +49,7 @@ export const CharacterProvider = ({ children }) => {
     handleEdit,
     editingCharacter,
     clearEditing
-  }), [characters, editingCharacter]);
+  }), [characters, editingCharacter, clearEditing, handleEdit, updateCharacter]);
 
   return (
     <CharacterContext.Provider value={value}>
