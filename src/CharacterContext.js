@@ -6,11 +6,7 @@ const CharacterContext = createContext();
 
 export const CharacterProvider = ({ children }) => {
   const [characters, setCharacters] = useState([
-    { id: 1, name: "Five", initialHealth: 45, initiative: 0, currentHealth: 45 },
-    { id: 2, name: "Lucrecia", initialHealth: 40, initiative: 0, currentHealth: 40 },
-    { id: 3, name: "Olofir", initialHealth: 32, initiative: 0, currentHealth: 32 },
-    { id: 4, name: "Thorlin", initialHealth: 24, initiative: 0, currentHealth: 24 },
-    { id: 5, name: "Daelis", initialHealth: 31, initiative: 0, currentHealth: 31 }
+    { id: 1, name: "Character", initialHealth: 1, initiative: 0, currentHealth: 1 },
   ]);
   const [editingCharacter, setEditingCharacter] = useState(null);
 
