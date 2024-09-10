@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Container from '@mui/material/Container';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { darkTheme } from './Theme'; // Ensure this theme setup is correctly imported
+import { CharacterProvider, useCharacterContext } from './CharacterContext'; // Adjust the path if your context file is located elsewhere
+import CharacterList from './CharacterList'; // Adjust the path if your CharacterList component is located elsewhere
+import CharacterSpeedDial from './CharacterSpeedDial';  // Adjust the path if your NewCharacter component is located elsewhere
+import EditCharacter from './EditCharacter'; // Adjust the path if your EditCharacter component is located elsewhere
 
-function App() {
+const App = () => {
+  // Using context to access character management functions and state
+  const { setEditingCharacter } = useCharacterContext();
+  const [open, setOpen] = React.useState(false); // Corrected here
+
+  const handleEditOpen = (character) => {
+      setEditingCharacter(character);
+      setOpen(true); // Open the dialog
+  };
+
+  const handleClose = () => {
+      setOpen(false); // Close the dialog
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <CharacterProvider>
+              <Container>
+                  <CharacterList onEdit={handleEditOpen} />
+                  <CharacterSpeedDial />
+                      <EditCharacter 
+                      open={open}
+                      handleClose={handleClose}/> 
+              </Container>
+          </CharacterProvider>
+      </ThemeProvider>
   );
 }
 

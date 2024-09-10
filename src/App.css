@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.character-card {
+  max-width: 20%; /* Adjust based on your preference */
+  height: auto; /* Keep the aspect ratio */
+  margin: 10px; /* Spacing between cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .character-card {
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .character-card {
+    max-width: 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-card {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .character-card {
+    max-width: 100%;
+  }
+}
+

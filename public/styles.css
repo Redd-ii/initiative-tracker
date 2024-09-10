@@ -1,0 +1,61 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Header Styling */
+.cool-header {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    padding: 20px 40px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    a  {font-size: 10px; text-align:end}
+}
+
+.cool-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+.cool-header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cool-header nav ul li {
+    margin: 0 15px;
+}
+
+.cool-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.cool-header nav ul li a:hover, .cool-header nav ul li a:focus {
+    color: #a8e6ff;
+}
+
+/* Simple animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

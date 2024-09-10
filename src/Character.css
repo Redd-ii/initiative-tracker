@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@media (max-width: 600px) {
+  .characterBox {
+      font-family: 'Roboto', sans-serif; 
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .characterTitle {
+    font-family: 'Merriweather', serif; /* Setting the font for titles */
+  }
+  
+  /* Additional CSS to make the character box look better */
+  .characterBox {
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.2s; /* Smooth transform on hover */
+    font-size: 20px; /* Make it big */
+  }
+  
+  .characterBox:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+}
+
+.characterTitle {
+  font-family: 'Merriweather', serif; /* Setting the font for titles */
+}
+
+/* Additional CSS to make the character box look better */
+.characterBox {
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s; /* Smooth transform on hover */
+  font-size: 20px; /* Make it big */
+}
+
+.characterBox:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
